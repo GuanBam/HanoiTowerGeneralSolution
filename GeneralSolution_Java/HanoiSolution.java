@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * Solve Hanoi Tower Problems with more than 3 pegs
- * @author tianyang guan tyguancn@gmail.com
+ * @author GuanBam tyguancn@gmail.com
  */
 
 public class HanoiSolution {
