@@ -1,6 +1,6 @@
 /**
  * Find Best Solution as reference for HanoiSolution.java
- * @author tianyang guan tyguancn@gmail.com
+ * @author GuanBam tyguancn@gmail.com
  */
 public class HanoiBestCase {
     /**
