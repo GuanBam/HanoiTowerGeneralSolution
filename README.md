@@ -35,11 +35,31 @@ Instead of moveing N-1 disks from source to buffer, this time we choose to move 
 
 The problem here is now how to determine which will be the best K.
 
-### Basic Case
+### Basic Case Least Move
 When it's classic situation (three pegs). The relationship between move and disks is:
 
 M(N) = 2^N - 1
 
-|Disks|1|2|3|4|5|
-|-|-|-|-|-|-|
-|Moves|1|3|7|15|31|
+|Disks|1|2|3|4|5|6|7|8|9|10|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|Moves|1|3|7|15|31|63|127|255|511|1023|
+
+### Frame-Stewart Algorithm
+The core of algorithm lookes like below: 
+1. Moving N-K from source to buffer (The left one will be the largest disk)
+2. Moving K from source to destination (Move the largest disk to destination)
+3. Moving N-K from buffer to destination (Moving all disk on buffer to destination)
+To get the best K for current condition, we need tranverse all possible cases to determin which K will cause least move.
+
+Here let's consider N as disks in total,  K as disks to move, P as available pegs number, M() as function to obtain least move, we got:
+
+M(N,P) = min(M(K,P) + M(N-K,P-1) + M(K,P)) (K from 1 to N-1)  ==>>   M(N,P) = min(2M(K,P) + M(N-K,P-1))
+
+Since we can calculate the move for basic case (three pegs), DP can be used to calculate all possible cases.
+
+Let's say here's a DPLeastMove two-dimension array
+|Pegs\Disks|1|2|3|4|5|6|
+|-|-|-|-|-|-|-|
+|3|1|3|7|15|31|63|
+|4|1|3|||||
+|5|1|3|||||
