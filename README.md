@@ -66,9 +66,10 @@ Let's say here's a DPLeastMove two-dimension array initialized like below (value
 
 And the problem turns into DP[P][N] = min(2DP[P][K] + DP[P][N-K]) (K from 1 to N)
 
-Notice: When trying to find the minimum move, do not have to go through all N cases. 
-
+Notice: 
+When trying to find the minimum move, do not have to go through all N cases. 
 The result of each cases will looks like an upper opening curve, which means the value will go down and then raise up, once it start to raise up, we can break the loop.
+
 
 Now we know the way to find the least move, we still need an array to store what is the K for the least move, record the K into anorth similar two-dimension array or you can store it with the least move like [least move, K].
 
