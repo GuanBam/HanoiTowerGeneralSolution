@@ -40,6 +40,6 @@ When it's classic situation (three pegs). The relationship between move and disk
 
 M(N) = 2^N - 1
 
-|-----|-|-|-|-|-|
+|-|-|-|-|-|-|
 |Disks|1|2|3|4|5|
 |Moves|1|3|7|15|31|
