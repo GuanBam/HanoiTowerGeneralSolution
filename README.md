@@ -6,9 +6,9 @@ For classic Hanoi Tower Probelm (3 Pegs)
 
 The recursion idea will be:
 
-. Moving N-1 from source to buffer (The left one will be the largest disk)
-. Moving 1 from source to destination (Move the largest disk to destination)
-. Moving N-1 from buffer to destination (Moving all disk on buffer to destination)
+1. Moving N-1 from source to buffer (The left one will be the largest disk)
+2. Moving 1 from source to destination (Move the largest disk to destination)
+3. Moving N-1 from buffer to destination (Moving all disk on buffer to destination)
 
 ```Python
 /**
