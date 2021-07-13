@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Generate Input Baseline and request User Input
- * @author tianyang guan tyguancn@gmail.com
+ * @author GuanBam tyguancn@gmail.com
  */
 public class HanoiTowerInput {
     /**
