@@ -2,7 +2,7 @@ import java.util.Stack;
 
 /**
  * Self-defined Constructor to store Peg Information
- * @author tianyang guan tyguancn@gmail.com
+ * @author GuanBam tyguancn@gmail.com
  */
 //PegsStack constructor store Stack Value for each pegs, and store Pegs ID
 public class PegsStack {
