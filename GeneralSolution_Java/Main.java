@@ -1,6 +1,6 @@
 /**
  * Main Class
- * @author tianyang guan tyguancn@gmail.com
+ * @author GuanBam tyguancn@gmail.com
  */
 class Main {
     /**
