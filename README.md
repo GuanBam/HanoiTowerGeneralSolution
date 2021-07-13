@@ -53,13 +53,19 @@ To get the best K for current condition, we need tranverse all possible cases to
 
 Here let's consider N as disks in total,  K as disks to move, P as available pegs number, M() as function to obtain least move, we got:
 
-M(N,P) = min(M(K,P) + M(N-K,P-1) + M(K,P)) (K from 1 to N-1)  ==>>   M(N,P) = min(2M(K,P) + M(N-K,P-1))
+M(N,P) = min(M(K,P) + M(N-K,P-1) + M(K,P)) (K from 1 to N)  ==>>   M(N,P) = min(2M(K,P) + M(N-K,P-1))
 
-Since we can calculate the move for basic case (three pegs), DP can be used to calculate all possible cases.
+Since we can calculate the move for basic case (three pegs), DP can be used to calculate all possible cases to reduce repeated calculation.
 
-Let's say here's a DPLeastMove two-dimension array
+Let's say here's a DPLeastMove two-dimension array initialized like below (value represent for the least move):
 |Pegs\Disks|1|2|3|4|5|6|
 |-|-|-|-|-|-|-|
 |3|1|3|7|15|31|63|
 |4|1|3|||||
 |5|1|3|||||
+
+And the problem turns into DP[P][N] = min(2DP[P][K] + DP[P][N-K]) (K from 1 to N)
+
+Notice: when trying to find the minimum move, do not have to go through all N cases. 
+
+        The result of each cases will looks like an upper opening curve, which means the value will go down and then raise up, once it start to raise up, we can finished the finding.
