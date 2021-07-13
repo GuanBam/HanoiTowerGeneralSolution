@@ -35,4 +35,11 @@ Instead of moveing N-1 disks from source to buffer, this time we choose to move 
 
 The problem here is now how to determine which will be the best K.
 
+### Basic Case
+When it's classic situation (three pegs). The relationship between move and disks is:
 
+M(N) = 2^N - 1
+
+|-----|-|-|-|-|-|
+|Disks|1|2|3|4|5|
+|Moves|1|3|7|15|31|
