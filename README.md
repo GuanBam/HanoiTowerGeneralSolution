@@ -46,9 +46,9 @@ M(N) = 2^N - 1
 
 ### Frame-Stewart Algorithm
 The core of algorithm lookes like below: 
-1. Moving N-K from source to buffer (The left one will be the largest disk)
-2. Moving K from source to destination (Move the largest disk to destination)
-3. Moving N-K from buffer to destination (Moving all disk on buffer to destination)
+1. Moving K from source to buffer (The left one will be the largest disk)
+2. Moving N-K from source to destination (Move the largest disk to destination)
+3. Moving K from buffer to destination (Moving all disk on buffer to destination)
 To get the best K for current condition, we need tranverse all possible cases to determin which K will cause least move.
 
 Here let's consider N as disks in total,  K as disks to move, P as available pegs number, M() as function to obtain least move, we got:
